@@ -24,7 +24,7 @@ public class LargestInArray {
         //find the largest value
 
         double largest=value[0];
-        for(int i=0; i<currentSize; i++){
+        for(int i=1; i<currentSize; i++){
 
             if(value[i]>largest){
                 largest=value[i];
@@ -42,6 +42,14 @@ public class LargestInArray {
             System.out.println();
         }
 
+
+        System.out.print(value[0]);
+        for(int i=1; i<value.length; i++){
+            System.out.print(","+ value[i]);
+        }
+
     }
+
+
 
 }

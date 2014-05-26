@@ -1,0 +1,29 @@
+package SamplePaper.Recursion;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: liliya
+ * Date: 20/05/14
+ * Time: 21:05
+ * To change this template use File | Settings | File Templates.
+ */
+public class PowerOfN {
+
+    public static int powerOf(int base, int exponent){
+
+        if(exponent==0){
+            return 1;
+        }
+        else if(base==0){
+            return 0;
+        }
+        else{
+            return base*powerOf(base, exponent-1);
+        }
+    }
+
+    public static void main(String [] args){
+
+        System.out.println(powerOf(5, 3));
+    }
+}

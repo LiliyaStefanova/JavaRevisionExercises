@@ -11,11 +11,13 @@ public class CountingDigits {
 
     public static int countDigits(int n, int digit){
 
-        if(n%10==n&& n==digit){
+        if(n%10==n){
+            if(n==digit){
             return 1;
         }
-        else if(n%10==n && n!=digit){
+            else{
             return 0;
+            }
         }
         else{
             if(n%10==digit){
@@ -30,6 +32,6 @@ public class CountingDigits {
 
     public static void main(String [] args){
 
-        System.out.println(countDigits(2202, 2));
+        System.out.println(countDigits(1101, 2));
     }
 }

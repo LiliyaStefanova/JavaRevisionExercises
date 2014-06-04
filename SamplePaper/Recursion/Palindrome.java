@@ -28,5 +28,6 @@ public class Palindrome {
     public static void main(String [] args){
 
         System.out.println(palindrome("51215"));
+        System.out.println(palindrome("34563"));
     }
 }

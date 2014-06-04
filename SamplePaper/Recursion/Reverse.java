@@ -19,9 +19,15 @@ public class Reverse {
         }
     }
 
-    public static String memoryBlockReverse(String str1, String str2, int len1, int len2){
+    public static void memoryBlockReverse(String str1, String str2, int len1, int len2){
 
-        return reverse(str1+str2, (len1+len2));
+        String s=reverse(str1+str2, len1+len2);
+
+        String o=reverse(s.substring(0, len1), len1);
+        String t=reverse(s.substring(len1, len1+len2),len2);
+
+        System.out.print(o);
+        System.out.println(t);
 
     }
 
@@ -29,7 +35,7 @@ public class Reverse {
 
         System.out.println(reverse("abcd", 4));
 
-        System.out.println(memoryBlockReverse("abcd", "efgh", 4, 4));
+       memoryBlockReverse("abcd", "efgh", 4, 4);
     }
 
 }

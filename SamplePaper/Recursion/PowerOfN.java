@@ -22,8 +22,20 @@ public class PowerOfN {
         }
     }
 
+    public static int power2(int base, int exponent){
+        if(exponent==0){
+            return 1;
+        }
+        else if(exponent==1){
+            return base;
+        }
+        else{
+            return base*power2(base, exponent-1);
+        }
+    }
+
     public static void main(String [] args){
 
-        System.out.println(powerOf(5, 3));
+        System.out.println(power2(0, 6));
     }
 }

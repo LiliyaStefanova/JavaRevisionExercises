@@ -49,10 +49,10 @@ public class StringDemo {
     }
 
     public void launch(){
-        //System.out.println(concatenate(str1, str2));
-        //System.out.println(findNumChars(str1));
-        //System.out.println(whichOccursFirst(str1, str2));
-        //System.out.println(equals(str1, str2));
+        System.out.println(concatenate(str1, str2));
+        System.out.println(findNumChars(str1));
+        System.out.println(whichOccursFirst(str1, str2));
+        System.out.println(equals(str1, str2));
         System.out.println(toLowerCase(str1));
     }
 }

@@ -50,17 +50,20 @@ public class DoubleList {
         current=current.getNextNode();
     }
 
-    public void deleteNode(DoubleNode node){
+    public DoubleNode deleteNode(DoubleNode node){
+        DoubleNode store=null;
         if(listHead==null){
-            return;
+            return null;
         }
         else if(listHead.equals(node)){
+            store=listHead;
             listHead=listHead.getNextNode();
             listHead.setPreviousNode(null);
         }
         DoubleNode current=listHead;
         while(current.getNextNode()!=null){
             if(current.equals(node)){
+                store=current;
                 DoubleNode temp;
                 temp=current.getPreviousNode();
                 current=current.getNextNode();
@@ -71,7 +74,19 @@ public class DoubleList {
                 current=current.getNextNode();
             }
         }
+        return store;
+    }
 
+    public DoubleNode getNode(String name){
+        DoubleNode current=listHead;
+        DoubleNode result=null;
+        while(current!=null){
+            if(current.getName().equals(name)){
+                result=current;
+            }
+         current=current.getNextNode();
+        }
+        return result;
     }
 
     public void traverseForward(){

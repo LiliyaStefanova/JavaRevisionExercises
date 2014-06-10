@@ -34,6 +34,19 @@ public class MinElement {
         return min;
     }
 
+    public static <T extends Comparable<T>> T findMinElement(List<T> list, int begin, int end){
+
+        if(begin==end){
+            return list.get(begin);
+        }
+        T result=findMinElement(list, begin, end-1);
+        if(result.compareTo(list.get(end))<0){
+            return result;
+        }
+            return list.get(end);
+
+    }
+
     public static void main(String [] args){
 
         List<Integer> test=new ArrayList<Integer>();
@@ -41,7 +54,10 @@ public class MinElement {
         test.add(2);
         test.add(9);
         test.add(11);
+        test.add(1);
+        test.add(53);
 
         System.out.println(findMin(test));
+        System.out.println(findMinElement(test, 1,5));
     }
 }

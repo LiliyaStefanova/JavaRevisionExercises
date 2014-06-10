@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.NoSuchElementException;
 
-public class PreSchool  {
+public class PreSchool implements Iterable<Child1> {
 
     Set<Child1>children= new HashSet<Child1>();
 
@@ -22,10 +22,12 @@ public class PreSchool  {
 
     public static void main(String [] args){
 
-        Child1 c1=new Child1();
-        Child1 c2=new Child1();
-        Child1 c3=new Child1();
-        Child1 c4=new Child1();
+        Child1 c1=new Child1("Louie");
+        Child1 c2=new Child1("Rosie");
+        Child1 c3=new Child1("Betty");
+        Child1 c4=new Child1("Joey");
+
+        Teacher t1=new Teacher("Miss Smith", "biology");
 
         PreSchool ps=new PreSchool();
         ps.enrol(c1);
@@ -34,6 +36,17 @@ public class PreSchool  {
         ps.enrol(c4);
         ps.withdraw(c1);
 
+        for(Child1 c:ps){
+            Teacher.talkTo(c);
+        }
+
     }
+
+    @Override
+    public Iterator<Child1> iterator() {
+        Iterator<Child1> iter=children.iterator();
+        return iter;
+    }
+
 
 }

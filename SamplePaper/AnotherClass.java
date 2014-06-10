@@ -20,7 +20,8 @@ public class AnotherClass {
             System.out.println("AnotherClass:: Value of x is " + x);
         } catch (RuntimeException ex) {
             System.out.println("In exception x = " + x);
-            throw new IllegalArgumentException("AnotherClass::Method exception - " + ex.getMessage());
+            //throw new IllegalArgumentException("AnotherClass::Method exception - " + ex.getMessage());
+            return x;
         } catch (Exception e) {
             System.out.println("In general exception");
             throw new RuntimeException("From exception");
@@ -28,9 +29,10 @@ public class AnotherClass {
 
             x -= 15;
             System.out.println("AnotherClass:: " + x);
+            return x;
 
         }
-        return x;
+      //  return x;
     }
 }
 

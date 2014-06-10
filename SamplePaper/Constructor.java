@@ -6,6 +6,11 @@ package SamplePaper;
 
         protected int x;
 
+        static{
+            System.out.println("Mewh in Constructor");
+        }
+
+
         public Constructor() {
             System.out.println("[1]" + this);
         }

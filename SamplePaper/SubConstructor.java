@@ -4,8 +4,13 @@ package SamplePaper;
 
         protected String s;
 
+        static{
+            System.out.println("Bla in SubConstructor");
+        }
+
         SubConstructor(int x) {
             super("label");
+
             x = this.x;
             System.out.println("[4] x = " + x);
         }

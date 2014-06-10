@@ -11,4 +11,12 @@ public class Child1 {
 
     private String name;
     private int age;
+
+    public Child1(String name){
+        this.name=name;
+    }
+
+    public String getName(){
+       return name;
+    }
 }

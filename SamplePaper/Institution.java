@@ -36,8 +36,8 @@ public class Institution<T> implements Iterable<T>{
 
     public static void main(String [] args){
 
-        Child1 c1=new Child1();
-        Child1 c2=new Child1();
+        Child1 c1=new Child1("Matt");
+        Child1 c2=new Child1("Poppy");
 
         Institution<Child1> kindergarten=new Institution<Child1>();
 
@@ -46,6 +46,8 @@ public class Institution<T> implements Iterable<T>{
 
     @Override
     public Iterator<T> iterator() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return  members.iterator();
     }
 }
+
+

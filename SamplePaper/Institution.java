@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  * Time: 17:34
  * To change this template use File | Settings | File Templates.
  */
-public class Institution<T> implements Iterable<T>{
+public class Institution<T> implements Iterable<T> {
 
     private Set<T> members=new HashSet<T>();
 
@@ -26,8 +26,8 @@ public class Institution<T> implements Iterable<T>{
         members.remove(o);
     }
 
-    public <P extends T> void merge(Institution<T> other){
-        for(T person: other) {
+    public <P extends T > void merge(Institution<P> other){
+        for(P person: other) {
             other.withdraw( person);
             this.enrol( person );
         }

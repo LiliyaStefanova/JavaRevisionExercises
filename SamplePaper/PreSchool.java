@@ -44,8 +44,7 @@ public class PreSchool implements Iterable<Child1> {
 
     @Override
     public Iterator<Child1> iterator() {
-        Iterator<Child1> iter=children.iterator();
-        return iter;
+       return children.iterator();
     }
 
 
